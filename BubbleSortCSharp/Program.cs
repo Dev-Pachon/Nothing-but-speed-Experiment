@@ -37,7 +37,7 @@ namespace BubbleSort
             const int Size2 = 5000;
             const int Size3 = 10000;
 
-            int[] arr = new int[Size1]; //Modify to change the size of the array
+            int[] arr = new int[Size3]; //Modify to change the size of the array
 
 
             //Note: if you want the array to be filled in an ascending way, use ms.ascending(arr)
@@ -47,7 +47,9 @@ namespace BubbleSort
             for(int k=0; k < 100; k++)
             {
                 ms.randomFill(arr);
-                ms.ascending(arr);
+               // ms.ascending(arr);
+              //  ms.descending(arr);
+
                 //foreach (int p in arr)
                 //    Console.Write(p + " ");
 

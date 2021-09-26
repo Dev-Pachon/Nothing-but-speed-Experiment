@@ -7,7 +7,7 @@ import kotlin.time.ExperimentalTime
 import kotlin.time.measureTime
 
 
-const val fileName = "data/data.txt"
+const val fileName = "data/data.csv"
 const val sizeOne :Int = 500
 const val sizeTwo :Int = 5000
 const val sizeThree :Int = 10000
@@ -15,6 +15,7 @@ val file = File(fileName)
 
 fun main() {
     file.bufferedWriter().use { out ->
+        out.write("language,array_size,t_random_order,t_asc_order,t_des_order\n")
         for (i in 0 until 100) {
             sortAllByOrder(sizeOne,out)
             sortAllByOrder(sizeTwo,out)
@@ -40,13 +41,13 @@ fun fillRandom(size:Int): IntArray {
 
 fun fillAscending(size:Int): IntArray {
     var array = fillRandom(size)
-    array = array.sortedWith(kotlin.Comparator { i1, i2 -> i1.compareTo(i2) }).toIntArray()
+    array = array.sortedWith { i1, i2 -> i1.compareTo(i2) }.toIntArray()
     return array
 }
 
 fun fillDescending(size:Int): IntArray {
     var array = fillRandom(size)
-    array = array.sortedWith(kotlin.Comparator { i1, i2 -> i2.compareTo(i1) }).toIntArray()
+    array = array.sortedWith { i1, i2 -> i2.compareTo(i1) }.toIntArray()
     return array
 }
 

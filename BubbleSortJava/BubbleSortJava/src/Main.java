@@ -36,7 +36,7 @@ public class Main {
 
 		Main m = new Main();
 
-		int[] arr = new int[SIZE2]; //Modify if you want to change the size of the array
+		int[] arr = new int[SIZE3]; //Modify if you want to change the size of the array
 
 		for(int k=0;k<100;k++) {
 			m.randomFill(arr);
@@ -45,12 +45,12 @@ public class Main {
 
 			//m.sortDescending(arr);
 			
-			/**	for (int i = 0; i <=arr.length - 1; i++)   
-			{  
-			System.out.println(arr[i]);  
-			} **/
+			//m.sortAscending(arr);
+			
+			
 			
 			double t1 = System.currentTimeMillis();
+			//long nt1 = System.nanoTime();
 			
 			int temp = 0;  
 			for(int i=0; i < arr.length; i++){  
@@ -68,9 +68,10 @@ public class Main {
 			
 			double t2 = System.currentTimeMillis();
 			double et = t2-t1;
-			System.out.println(et);
-
 			
+			//long nt2 = System.nanoTime();
+			//long ent = nt2-nt1;
+			System.out.println(et);
 		}
 		
 		

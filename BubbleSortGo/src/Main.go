@@ -7,12 +7,13 @@ import (
 )
 
 //Size 1 500
-const size = 500
+// const size = 500
 
 //Size 2 5000
-//const size = 500
+//const size = 5000
+
 //Size 3 10000
-//const size = 500
+const size = 10000
 
 func fillRandom(arr []int) []int {
 
@@ -70,17 +71,17 @@ func main() {
 	for i := 0; i < 100; i++ {
 		var arr [size]int
 		ar := fillRandom(arr[:])
-		sort(ar[:], true)
+		sort(ar[:], false)
 	}
 	for i := 0; i < 100; i++ {
 		var arr [size]int
 		ar := fillAsc(arr[:])
-		sort(ar[:], true)
+		sort(ar[:], false)
 	}
 	for i := 0; i < 100; i++ {
 		var arr [size]int
 		ar := fillDes(arr[:])
-		sort(ar[:], true)
+		sort(ar[:], false)
 	}
 }
 
